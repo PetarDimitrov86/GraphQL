@@ -1,0 +1,31 @@
+{
+	// using named object so that we can use the same query twice
+  apple: company(id: "1"){
+    ...companyDetails
+    users {
+      firstName
+    }
+  }
+  google: company(id: "2"){
+    ...companyDetails
+    users {
+      firstName
+    }
+  }
+}
+
+// used to extract repetitive fields
+fragment companyDetails on Company {
+  id
+  name
+  description
+}
+
+// how to consume mutations. Used for post, put, delete requests
+mutation {
+  addUser(firstName:"Pesho", age: 25) {
+    id
+    firstName
+    age
+  }
+}
