@@ -2,6 +2,7 @@
 
 # dependencies
 /users/node_modules
+/Lyrical-GraphQL/node_modules
 /.pnp
 .pnp.js
 
